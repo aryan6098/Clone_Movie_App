@@ -3,7 +3,7 @@ import { data } from "../data";
 import Navbar from "./Navbar";
 import MovieCard from "./MovieCard";
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div className="App">
@@ -15,7 +15,7 @@ class App extends React.Component {
           </div>
           <div className="list">
             {data.map((movie, index) => (
-              <MovieCard movie={movie} key={"movies-${index}"} />
+              <MovieCard movie={movie} key={`movies-${index}`} />
             ))}
           </div>
           {data.length === 0 ? (
